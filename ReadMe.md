@@ -2,6 +2,8 @@
 
 This template uses the WebUI library to create Gui apps built on the modern OS built-in WebView capability.
 
+![demo](./demo.gif)
+
 | Note: I don't necessarily recommend using this for your next Steam game. It might be 100% fine, but the WebUI library and the Deno implementation of it and very much still in progress.
 
 To Run this template you need deno installed. Then...
