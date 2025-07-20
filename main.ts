@@ -58,6 +58,7 @@ const getFile = async (
 };
 
 async function myFileHandler(myUrl: URL) {
+  if(myUrl.pathname.includes('com.chrome.devtools.json')) return "HTTP/1.1 404 Not Found";
   const extension = myUrl.pathname.split('.').pop();
   if (extension == undefined) return "HTTP/1.1 404 Not Found";
   if(MIME_TYPES[extension]) {
@@ -65,12 +66,6 @@ async function myFileHandler(myUrl: URL) {
   }
   return "HTTP/1.1 404 Not Found";
 }
-
-// Bind Exit
-myWindow.bind("exit", () => {
-  // Close all windows and exit
-  WebUI.exit();
-});
 
 // Bind Exit
 myWindow.bind("exit", () => {
