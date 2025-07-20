@@ -2,14 +2,9 @@
   "tasks": {
     "dev": { "dependencies": ["bundle:watch", "run"] },
     "run": "deno run -A main.ts",
-    "bundle:watch": "deno bundle --watch ./game/mod.ts --outdir ./static/js --platform 'browser'",
-    "bundle": "deno bundle ./game/mod.ts --outdir ./static/js --platform 'browser'",
-    "compile": "deno compile -A --no-terminal ./main.ts"
-  },
-  "imports": {
-    "@std/assert": "jsr:@std/assert@1",
-    "@webui/deno-webui": "jsr:@webui/deno-webui@^2.5.8",
-    "phaser": "npm:phaser@4.0.0-rc.4"
+    "bundle:watch": "deno bundle --minify  --watch ./game/mod.ts --outdir ./static/js --platform 'browser'",
+    "bundle": "deno bundle --minify ./game/mod.ts --outdir ./static/js --platform 'browser'",
+    "compile": "deno compile -A --include ./static/ -o ./exe/app.exe  --no-terminal --no-config ./main.ts"
   },
   "compilerOptions": {
     "lib": [

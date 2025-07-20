@@ -1,4 +1,4 @@
-import Phaser from 'phaser';
+import Phaser from 'npm:phaser@4.0.0-rc.4';
 import Game from "./scenes/game.ts";
 
 const config: Phaser.Types.Core.GameConfig = {

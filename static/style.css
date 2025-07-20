@@ -5,13 +5,10 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* min-height: 100vh; */
+	min-height: 100vh;
 	font-family: Arial, sans-serif;
 }
 
 #game-container {
-	/* border: 2px solid #34495e; */
-	/* border-radius: 8px; */
 	overflow: hidden;
-	/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
 }

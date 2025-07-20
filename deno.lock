@@ -1,27 +1,19 @@
 {
   "version": "5",
   "specifiers": {
-    "jsr:@std/assert@1": "1.0.13",
+    "jsr:@std/fs@*": "1.0.19",
     "jsr:@std/fs@0.229.3": "0.229.3",
-    "jsr:@std/internal@^1.0.6": "1.0.9",
     "jsr:@std/path@1.0.8": "1.0.8",
-    "jsr:@webui/deno-webui@2.5.8": "2.5.8",
     "jsr:@webui/deno-webui@^2.5.8": "2.5.8",
     "jsr:@zip-js/zip-js@2.7.60": "2.7.60",
     "npm:phaser@4.0.0-rc.4": "4.0.0-rc.4"
   },
   "jsr": {
-    "@std/assert@1.0.13": {
-      "integrity": "ae0d31e41919b12c656c742b22522c32fb26ed0cba32975cb0de2a273cb68b29",
-      "dependencies": [
-        "jsr:@std/internal"
-      ]
-    },
     "@std/fs@0.229.3": {
       "integrity": "783bca21f24da92e04c3893c9e79653227ab016c48e96b3078377ebd5222e6eb"
     },
-    "@std/internal@1.0.9": {
-      "integrity": "bdfb97f83e4db7a13e8faab26fb1958d1b80cc64366501af78a0aee151696eb8"
+    "@std/fs@1.0.19": {
+      "integrity": "051968c2b1eae4d2ea9f79a08a3845740ef6af10356aff43d3e2ef11ed09fb06"
     },
     "@std/path@1.0.8": {
       "integrity": "548fa456bb6a04d3c1a1e7477986b6cffbce95102d0bb447c67c4ee70e0364be"
@@ -29,7 +21,7 @@
     "@webui/deno-webui@2.5.8": {
       "integrity": "c3316d6d103a66f29a672ed7e3773cc73c3e5045173050f5f7726e9350e87d45",
       "dependencies": [
-        "jsr:@std/fs",
+        "jsr:@std/fs@0.229.3",
         "jsr:@std/path",
         "jsr:@zip-js/zip-js"
       ]
@@ -48,12 +40,5 @@
         "eventemitter3"
       ]
     }
-  },
-  "workspace": {
-    "dependencies": [
-      "jsr:@std/assert@1",
-      "jsr:@webui/deno-webui@^2.5.8",
-      "npm:phaser@4.0.0-rc.4"
-    ]
   }
 }
